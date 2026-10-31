@@ -12,7 +12,7 @@ def NULL_not_found(object: Any) -> int:
         print(f"Zero: {object} {ob_type}")
     elif ob_type is str and object == "":
         print(f"Empty: {ob_type}")
-    elif ob_type is bool and object == False:
+    elif ob_type is bool and object is False:
         print(f"Fake: {object} {ob_type}")
     else:
         print("Type not Found")
