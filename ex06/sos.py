@@ -1,5 +1,6 @@
 import sys
 
+
 def main() -> None:
     """encode one string argument as morse code"""
     NESTED_MORSE = {
@@ -46,7 +47,6 @@ def main() -> None:
         if len_arg != 2:
             raise AssertionError("the arguments are bad")
 
-        
         __result = []
 
         for c in sys.argv[1]:
@@ -57,6 +57,7 @@ def main() -> None:
         print(" ".join(__result))
     except Exception as error:
         print(f"AssertionError: {error}")
+
 
 if __name__ == "__main__":
     main()

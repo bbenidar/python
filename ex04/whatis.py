@@ -14,6 +14,5 @@ try:
         print("I'm Even.")
     else:
         print("I'm Odd.")
-    
 except AssertionError as error:
     print(f"AssertionError: {error}")

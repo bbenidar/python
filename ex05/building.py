@@ -2,11 +2,11 @@
 import sys
 
 
-
 def main() -> None:
-    """takes a single string argument and displays the sums of its upper-case characters, lower-case characters, punctuation characters, digits, and spaces."""
+    """takes a single string argument and displays
+      the sums of its upper-case characters, lower-case characters,
+        punctuation characters, digits, and spaces."""
     try:
-        print (main.__doc__)
         len_arg = len(sys.argv)
 
         if len_arg > 2:
@@ -14,7 +14,7 @@ def main() -> None:
         __str = ""
         if len_arg == 2:
             __str = sys.argv[1]
-        if  __str == "":
+        if __str == "":
             print("What is the text to count?")
             __str = sys.stdin.readline()
         """Print the text length and counts for five character categories."""
@@ -45,6 +45,7 @@ def main() -> None:
         return
     except AssertionError as error:
         print(f"AssertionError: {error}")
+
 
 if __name__ == "__main__":
     main()

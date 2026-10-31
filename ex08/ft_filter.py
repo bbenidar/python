@@ -10,19 +10,3 @@ def ft_filter(function, iterable):
     for item in iterable:
         if function(item):
             yield item
-
-
-
-# def main() -> None:
-#     """Demonstrate ft_filter and handle errors during iteration."""
-#     try:
-#         result = ft_filter(lambda x: x % 2 == 0, range(10))
-#         print(list(result))
-#     except KeyboardInterrupt:
-#         return
-#     except Exception as error:
-#         print(f"{type(error).__name__}: {error}")
-
-
-# if __name__ == "__main__":
-#     main()

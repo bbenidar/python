@@ -1,5 +1,6 @@
 import sys
 
+
 def main() -> None:
     """a program accepts two arguments: a string (S) and an integer (N).
     and output a list of words from S that have a length greater than N"""
@@ -22,6 +23,7 @@ def main() -> None:
         return
     except Exception as error:
         print(f"AssertionError: {error}")
+
 
 if __name__ == "__main__":
     main()
