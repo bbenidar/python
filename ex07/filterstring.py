@@ -14,6 +14,9 @@ def main() -> None:
         except ValueError:
             raise AssertionError("the arguments are bad")
 
+        if not all(c.isalnum() or c == " " for c in sys.argv[1]):
+            raise AssertionError("the arguments are bad")
+
         lst = [word for word in sys.argv[1].split(" ") if word]
 
         result = list(filter(lambda word: len(word) > min_l, lst))
@@ -21,7 +24,7 @@ def main() -> None:
 
     except KeyboardInterrupt:
         return
-    except Exception as error:
+    except AssertionError as error:
         print(f"AssertionError: {error}")
 
 

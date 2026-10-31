@@ -1,30 +1,27 @@
-
 import sys
 
 
 def main() -> None:
-    """takes a single string argument and displays
-      the sums of its upper-case characters, lower-case characters,
-        punctuation characters, digits, and spaces."""
+    """Count upper, lower, punctuation, space and digit characters
+    in the given string."""
     try:
         len_arg = len(sys.argv)
 
         if len_arg > 2:
             raise AssertionError("more than one argument is provided")
-        __str = ""
+        text = ""
         if len_arg == 2:
-            __str = sys.argv[1]
-        if __str == "":
+            text = sys.argv[1]
+        if text == "":
             print("What is the text to count?")
-            __str = sys.stdin.readline()
-        """Print the text length and counts for five character categories."""
+            text = sys.stdin.readline()
         up = 0
         lw = 0
         p_mark = 0
         sp = 0
         nu = 0
         pn = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
-        for c in __str:
+        for c in text:
             if c.isupper():
                 up += 1
             elif c.islower():
@@ -35,7 +32,7 @@ def main() -> None:
                 nu += 1
             elif c.isspace():
                 sp += 1
-        print(f"The text contains {len(__str)} characters:")
+        print(f"The text contains {len(text)} characters:")
         print(f"{up} upper letters")
         print(f"{lw} lower letters")
         print(f"{p_mark} punctuation marks")

@@ -47,15 +47,15 @@ def main() -> None:
         if len_arg != 2:
             raise AssertionError("the arguments are bad")
 
-        __result = []
+        result = []
 
         for c in sys.argv[1]:
             c = c.upper()
             if c not in NESTED_MORSE:
                 raise AssertionError("the arguments are bad")
-            __result.append(NESTED_MORSE[c])
-        print(" ".join(__result))
-    except Exception as error:
+            result.append(NESTED_MORSE[c])
+        print(" ".join(result))
+    except AssertionError as error:
         print(f"AssertionError: {error}")
 
 
