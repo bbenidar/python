@@ -10,3 +10,12 @@ def ft_filter(function, iterable):
     for item in iterable:
         if function(item):
             yield item
+
+
+def main() -> None:
+    """Provide the required entry point for this importable module."""
+    pass
+
+
+if __name__ == "__main__":
+    main()
